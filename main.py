@@ -12,7 +12,7 @@ donor_id = os.getenv('DONOR_CHANNEL_ID')
 # channel_id = CHANNEL_ID
 # donor_id = DONOR_CHANNEL_ID
 
-app = Client('bot_python', api_id, api_hash)
+app = Client('whale pumps admin', api_id, api_hash)
 
 
 # @app.on_message(filters.chat([donor_id, int(channel_id)]))
