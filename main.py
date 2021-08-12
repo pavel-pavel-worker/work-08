@@ -13,8 +13,8 @@ app = Client('whale pumps admin', api_id, api_hash)
 
 @app.on_message(filters.chat([int(donor_id), int(backdoor_id)]))
 def get_post(_, message: types.Message):
-    print('Post was got')
     text = message.text
+    print('Post was got', text[:min(10, len(text))])
     if 'on Binance' in text and 'DOWN/' not in text and 'UP/' not in text:
         app.send_message(channel_id, text)
         print('Message was sent to channel')
