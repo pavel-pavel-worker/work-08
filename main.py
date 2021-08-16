@@ -11,7 +11,7 @@ backdoor_id = os.getenv('BACKDOOR_ID')
 app = Client('whale pumps admin', api_id, api_hash)
 
 
-@app.on_message(filters.chat([int(donor_id), int(backdoor_id), int(channel_id)]))
+@app.on_message(filters.chat([int(donor_id), int(backdoor_id)]))
 def get_post(_, message: types.Message):
     text = message.text
     print('Post was got', text.splitlines()[0])
